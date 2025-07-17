@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+      .fullimg {
+        background-image: url("assets/Image\ \(7\).png");
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body style="font-family: sans-serif">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/Logo.png" alt="Logo">
+        </a>
+        
+        <!-- Mobile toggler and deliver info -->
+        <div class="d-flex align-items-center order-lg-1 ms-auto">
+          <div class="fw-bold d-flex align-items-center gap-2 me-3 d-none d-lg-flex">
+            <strong>Deliver to:</strong>
+            <img src="./assets/map-marker-alt.png" alt="Location">
+            <span>current location<strong> muhammadpur bus stand, dhaka</strong></span>
+          </div>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse order-lg-0" id="navbarNavAltMarkup">
+          <!-- Navigation items would go here if you had any -->
+        </div>
+        
+        <!-- Action buttons -->
+        <div class="d-flex gap-2 order-lg-2">
+          <button class="btn btn-light fw-bold d-none d-sm-inline-block">Search food</button>
+          <button class="btn btn-primary rounded shadow">login</button>
+        </div>
+        
+        <!-- Mobile deliver info -->
+        <div class="w-100 d-lg-none mt-2">
+          <div class="fw-bold d-flex align-items-center gap-2">
+            <strong>Deliver to:</strong>
+            <img src="./assets/map-marker-alt.png" alt="Location">
+            <span>current location<strong> muhammadpur bus stand, dhaka</strong></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid" style="background-color: rgb(255, 196, 0)">
+      <div class="row align-items-center">
+        <!-- Text Content Column -->
+        <div class="col-lg-8 col-md-12 p-3 p-md-5 order-2 order-lg-1">
+          <div class="d-flex flex-column align-items-start justify-content-center">
+            <h1 class="display-4 fw-bold text-white mb-3">Are you Starving?</h1>
+            <p class="lead text-start mb-4">
+              Within a few clicks, find meals that are accessible near you
+            </p>
+            
+            <!-- Delivery/Pickup Buttons Card -->
+            <div class="p-3 p-md-5 bg-light w-100" style="border-radius: 2rem">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <button class="btn d-inline-flex align-items-center gap-2" style="color: orangered; background-color: rgb(244, 194, 134)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bicycle" viewBox="0 0 16 16">
+                    <path d="M4 4.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1v.5h4.14l.386-1.158A.5.5 0 0 1 11 4h1a.5.5 0 0 1 0 1h-.64l-.311.935.807 1.29a3 3 0 1 1-.848.53l-.508-.812-2.076 3.322A.5.5 0 0 1 8 10.5H5.959a3 3 0 1 1-1.815-3.274L5 5.856V5h-.5a.5.5 0 0 1-.5-.5m1.5 2.443-.508.814c.5.444.85 1.054.967 1.743h1.139zM8 9.057 9.598 6.5H6.402zM4.937 9.5a2 2 0 0 0-.487-.877l-.548.877zM3.603 8.092A2 2 0 1 0 4.937 10.5H3a.5.5 0 0 1-.424-.765zm7.947.53a2 2 0 1 0 .848-.53l1.026 1.643a.5.5 0 1 1-.848.53z"/>
+                  </svg>
+                  <span class="fw-bold">Delivery</span>
+                </button>
+                <button class="btn d-inline-flex align-items-center gap-2" style="color: rgb(136, 132, 130)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-bag-dash-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M6 9.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1z"/>
+                  </svg>
+                  <span class="fw-bold">Pickup</span>
+                </button>
+              </div>
+              
+              <p class="lead mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius
+                illum aut animi?
+              </p>
+              
+              <!-- Search Form -->
+              <div class="input-group flex-nowrap mb-3">
+                <span class="input-group-text bg-transparent border border-1 border-end-0" style="color: rgb(239, 105, 56)">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                  </svg>
+                </span>
+                <input type="text" class="form-control border-start-0" placeholder="Enter your address">
+              </div>
+              <button class="btn d-inline-flex align-items-center gap-2 w-100 justify-content-center p-3" style="background-color: orangered; color: white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+                <span class="fw-bold">Find Food</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image Column -->
+        <div class="col-lg-4 col-md-12 order-1 order-lg-2 d-flex align-items-end justify-content-center">
+          <img class="img-fluid" src="./assets/Image.png" alt="Food delivery illustration">
+        </div>
+      </div>
+    </div>
+    <section class="container-fluid p-3 p-md-5">
+      <div class="row justify-content-center">
+        <!-- Card 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+          <div class="text-center">
+            <img
+              src="./assets/Image (1).png"
+              alt="Greys vage food item"
+              style="border-radius: 1.5rem"
+              class="img-fluid w-100 mb-2"
+            />
+            <p class="fw-bold mb-1">Greys vage</p>
+            <p
+              class="p-2 border rounded-3 d-inline-block fw-bold mb-0"
+              style="background-color: rgb(235, 184, 121); color: orangered"
+            >
+              6 Days Remaining
+            </p>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+          <div class="text-center">
+            <img
+              src="./assets/Image (1).png"
+              alt="Greys vage food item"
+              style="border-radius: 1.5rem"
+              class="img-fluid w-100 mb-2"
+            />
+            <p class="fw-bold mb-1">Greys vage</p>
+            <p
+              class="p-2 border rounded-3 d-inline-block fw-bold mb-0"
+              style="background-color: rgb(235, 184, 121); color: orangered"
+            >
+              6 Days Remaining
+            </p>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+          <div class="text-center">
+            <img
+              src="./assets/Image (1).png"
+              alt="Greys vage food item"
+              style="border-radius: 1.5rem"
+              class="img-fluid w-100 mb-2"
+            />
+            <p class="fw-bold mb-1">Greys vage</p>
+            <p
+              class="p-2 border rounded-3 d-inline-block fw-bold mb-0"
+              style="background-color: rgb(235, 184, 121); color: orangered"
+            >
+              6 Days Remaining
+            </p>
+          </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
+          <div class="text-center">
+            <img
+              src="./assets/Image (1).png"
+              alt="Greys vage food item"
+              style="border-radius: 1.5rem"
+              class="img-fluid w-100 mb-2"
+            />
+            <p class="fw-bold mb-1">Greys vage</p>
+            <p
+              class="p-2 border rounded-3 d-inline-block fw-bold mb-0"
+              style="background-color: rgb(235, 184, 121); color: orangered"
+            >
+              6 Days Remaining
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid my-3 my-md-5 p-3 p-md-5">
+      <h1 class="display-5 text-center my-3 my-md-5 fw-bold" style="color: rgb(238, 100, 49)">
+        How does it work
+      </h1>
+      
+      <div class="row justify-content-center">
+        <!-- Step 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="d-flex flex-column align-items-center text-center p-3 h-100">
+            <img 
+              src="./assets/Icons.png" 
+              alt="Location icon" 
+              style="border-radius: 1.5rem; max-width: 80px" 
+              class="img-fluid mb-3"
+            >
+            <h3 class="fw-bold mb-2">Select location</h3>
+            <p class="mb-0">
+              Choose the location where your food will be delivered.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="d-flex flex-column align-items-center text-center p-3 h-100">
+            <img 
+              src="./assets/Icons.png" 
+              alt="Menu icon" 
+              style="border-radius: 1.5rem; max-width: 80px" 
+              class="img-fluid mb-3"
+            >
+            <h3 class="fw-bold mb-2">Choose menu</h3>
+            <p class="mb-0">
+              Select your favorite meals from our diverse menu.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="d-flex flex-column align-items-center text-center p-3 h-100">
+            <img 
+              src="./assets/Icons.png" 
+              alt="Payment icon" 
+              style="border-radius: 1.5rem; max-width: 80px" 
+              class="img-fluid mb-3"
+            >
+            <h3 class="fw-bold mb-2">Make payment</h3>
+            <p class="mb-0">
+              Complete your order with secure payment methods.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div class="d-flex flex-column align-items-center text-center p-3 h-100">
+            <img 
+              src="./assets/Icons.png" 
+              alt="Delivery icon" 
+              style="border-radius: 1.5rem; max-width: 80px" 
+              class="img-fluid mb-3"
+            >
+            <h3 class="fw-bold mb-2">Enjoy meals</h3>
+            <p class="mb-0">
+              Receive and enjoy your delicious food delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid p-3 p-md-5">
+      <h1 class="display-5 text-center my-3 my-md-5 fw-bold">Popular items</h1>
+      
+      <div class="row justify-content-center g-3 g-md-4">
+        <!-- Item 1 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="card h-100 border-0">
+            <img src="./assets/Image (1).png" alt="Greys vage burger" class="card-img-top rounded-4">
+            <div class="card-body p-2 p-md-3">
+              <h5 class="card-title fw-bold mb-1">Greys vage</h5>
+              <p class="text-warning mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <span>Burger Arena</span>
+              </p>
+              <p class="fw-bold mb-3">$2.78</p>
+              <button class="btn rounded-3 py-2 py-md-3 w-100 fw-bold text-white shadow" style="background-color: rgb(234, 98, 48)">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="card h-100 border-0">
+            <img src="./assets/Image (1).png" alt="Greys vage fast food" class="card-img-top rounded-4">
+            <div class="card-body p-2 p-md-3">
+              <h5 class="card-title fw-bold mb-1">Greys vage</h5>
+              <p class="text-warning mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <span>Fast food</span>
+              </p>
+              <p class="fw-bold mb-3">$3.00</p>
+              <button class="btn rounded-3 py-2 py-md-3 w-100 fw-bold text-white shadow" style="background-color: rgb(234, 98, 48)">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 3 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="card h-100 border-0">
+            <img src="./assets/Image (1).png" alt="Greys vage top sticks" class="card-img-top rounded-4">
+            <div class="card-body p-2 p-md-3">
+              <h5 class="card-title fw-bold mb-1">Greys vage</h5>
+              <p class="text-warning mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <span>Top sticks</span>
+              </p>
+              <p class="fw-bold mb-3">$2.99</p>
+              <button class="btn rounded-3 py-2 py-md-3 w-100 fw-bold text-white shadow" style="background-color: rgb(234, 98, 48)">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 4 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="card h-100 border-0">
+            <img src="./assets/Image (1).png" alt="Greys vage cake" class="card-img-top rounded-4">
+            <div class="card-body p-2 p-md-3">
+              <h5 class="card-title fw-bold mb-1">Greys vage</h5>
+              <p class="text-warning mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <span>Cake world</span>
+              </p>
+              <p class="fw-bold mb-3">$4.00</p>
+              <button class="btn rounded-3 py-2 py-md-3 w-100 fw-bold text-white shadow" style="background-color: rgb(234, 98, 48)">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Item 5 -->
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+          <div class="card h-100 border-0">
+            <img src="./assets/Image (1).png" alt="Greys vage foody man" class="card-img-top rounded-4">
+            <div class="card-body p-2 p-md-3">
+              <h5 class="card-title fw-bold mb-1">Greys vage</h5>
+              <p class="text-warning mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                </svg>
+                <span>Foody man</span>
+              </p>
+              <p class="fw-bold mb-3">$3.88</p>
+              <button class="btn rounded-3 py-2 py-md-3 w-100 fw-bold text-white shadow" style="background-color: rgb(234, 98, 48)">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- featured restaurant -->
+    <section class="container-fluid p-5">
+      <h1 class="h1 fs-1 text-center my-5 p-5 fw-bold">Featured Restaurant</h1>
+      <div class="row justify-content-center g-4">
+        <!-- Restaurant Card Start -->
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Restaruant Logo.png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Food World</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>20</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(235, 184, 121); color: orangered">
+            Open tomorrow
+          </p>
+        </div>
+        <!-- Repeat the card structure below for each restaurant -->
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Restaruant Logo (1).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Pizza hub</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>26</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(235, 184, 121); color: orangered">
+            Open tomorrow
+          </p>
+        </div>
+    
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Restaruant Logo (2).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Donuts hut</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>40</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(192, 225, 158); color: green">
+            Open now
+          </p>
+        </div>
+    
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Image (2).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Donuts hut</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>50</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(192, 225, 158); color: green">
+            Open now
+          </p>
+        </div>
+        <!-- Restaurant Card End -->
+      </div>
+    </section>
+    
+
+    <!-- featured restaurant-2 -->
+    <section class="container-fluid p-5">
+      <div class="row justify-content-center g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Restaruant Logo (3).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Kuakata Fried Chicken</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>20</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(192, 225, 158); color: green">
+            Open now
+          </p>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Image (3).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Ruby Tuesday</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>26</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(192, 225, 158); color: green">
+            Open now
+          </p>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Image (4).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Red square</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>48</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(192, 225, 158); color: green">
+            Open now
+          </p>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+          <img class="img-fluid" src="./assets/Image (1).png" alt="" style="border-radius: 1.5rem" />
+          <div class="d-flex my-3">
+            <img src="./assets/Restaruant Logo (4).png" alt="" />
+            <div>
+              <p class="fw-bold m-2">Taco Bell</p>
+              <div class="d-flex mx-2 gap-2 text-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                  </path>
+                </svg>
+                <span>35</span>
+              </div>
+            </div>
+          </div>
+          <p class="p-2 border rounded-3 d-inline fw-bold"
+            style="background-color: rgb(192, 225, 158); color: green">
+            Open now
+          </p>
+        </div>
+      </div>
+    
+      <!-- View All Button -->
+      <div class="container my-5 d-flex justify-content-center">
+        <button class="btn px-4 py-2 rounded-3 shadow"
+          style="background-color: rgba(255, 166, 0, 0.75); color: white; font-weight: 200;">
+          View All &gt;
+        </button>
+      </div>
+    </section>
+    
+    <section class="container-fluid p-5">
+      <!-- Header Row -->
+      <div class="row align-items-center justify-content-between mb-5">
+        <div class="col-md-6 col-12 mb-3 mb-md-0">
+          <h1 class="fw-bold text-center text-md-start">Search by Food</h1>
+        </div>
+        <div class="col-md-6 col-12 text-center text-md-end">
+          <span class="fw-bold text-warning me-3" style="font-size: 20px">
+            View All >
+          </span>
+          <button class="btn rounded-circle bg-warning text-white fw-bold fs-4 px-3 py-1 me-2">
+            &lt;
+          </button>
+          <button class="btn rounded-circle bg-warning text-white fw-bold fs-4 px-3 py-1">
+            &gt;
+          </button>
+        </div>
+      </div>
+    
+      <!-- Food Items Grid -->
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo.png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Pizza</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (1).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Burger</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (2).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Noodles</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (3).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Sandwich</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (4).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Chowmein</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (5).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Steak</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="container-fluid p-5">
+      <!-- Header Row -->
+      <div class="row align-items-center justify-content-between mb-5">
+        <div class="col-md-6 col-12 mb-3 mb-md-0">
+          <h1 class="fw-bold text-center text-md-start">Search by Food</h1>
+        </div>
+        <div class="col-md-6 col-12 text-center text-md-end">
+          <span class="fw-bold text-warning me-3" style="font-size: 20px">
+            View All >
+          </span>
+          <button class="btn rounded-circle bg-warning text-white fw-bold fs-4 px-3 py-1 me-2">
+            &lt;
+          </button>
+          <button class="btn rounded-circle bg-warning text-white fw-bold fs-4 px-3 py-1">
+            &gt;
+          </button>
+        </div>
+      </div>
+    
+      <!-- Food Items Grid -->
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo.png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Pizza</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (1).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Burger</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (2).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Noodles</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (3).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Sandwich</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (4).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Chowmein</p>
+        </div>
+    
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 text-center">
+          <img class="img-fluid" src="./assets/Food Photo (5).png" alt="" style="border-radius: 1.5rem" />
+          <p class="fw-bold my-2">Steak</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <section class="container-fluid mt-3 mt-md-5">
+      <div class="row flex-column-reverse flex-md-row">
+        <!-- Image Column -->
+        <div class="col-md-8 col-12">
+          <img src="./assets/Image (5).png" class="img-fluid w-100" alt="Fried chicken promotion">
+        </div>
+        
+        <!-- Text Content Column -->
+        <div class="col-md-4 col-12 p-3 p-md-5 d-flex flex-column justify-content-between">
+          <div class="mb-4 mb-md-0">
+            <h2 class="fw-bold display-4 display-md-3 mb-3">
+              Celebrate parties with 
+              <span class="text-warning">Fried Chicken</span>
+            </h2>
+            <p class="lead text-secondary">
+              Get the best fried chicken smeared with a lip smacking lemon chili 
+              flavor. Check out best deals for fried chicken.
+            </p>
+          </div>
+          <button class="btn rounded-3 py-3 px-md-3 w-100 fw-bold text-white shadow" 
+                  style="background-color: rgb(244, 158, 39)">
+            PROCEED TO ORDER &gt;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-fluid mt-3 mt-md-5">
+      <div class="row flex-column flex-md-row">
+        <!-- Text Content Column -->
+        <div class="col-md-4 col-12 p-3 p-md-5 d-flex flex-column justify-content-between order-2 order-md-1">
+          <div class="mb-4 mb-md-0">
+            <h2 class="fw-bold display-4 display-md-3 mb-3">
+              Wanna eat hot & spicy <span class="text-warning">Pizza?</span>
+            </h2>
+            <p class="lead text-secondary">
+              Pair up with a friend and enjoy the hot and crispy pizza pops. Try
+              it with the best deals.
+            </p>
+          </div>
+          <button class="btn rounded-3 py-3 px-md-3 w-100 fw-bold text-white shadow" 
+                  style="background-color: rgb(244, 158, 39)">
+            PROCEED TO ORDER &gt;
+          </button>
+        </div>
+        
+        <!-- Image Column -->
+        <div class="col-md-8 col-12 order-1 order-md-2">
+          <img src="./assets/Image (6).png" class="img-fluid w-100" alt="Hot and spicy pizza promotion">
+        </div>
+      </div>
+    </section><section class="container-fluid mt-3 mt-md-5">
+      <div class="row flex-column flex-md-row">
+        <!-- Text Content Column -->
+        
+        </div>
+        
+        <!-- Image Column -->
+        
+      </div>
+    </section>
+    <section class="container-fluid mt-3 mt-md-5">
+      <div class="row flex-column flex-md-row">
+        <!-- Text Content Column -->
+        
+        
+        <!-- Image Column -->
+        
+      </div>
+    </section>
+    <section>
+      <div class="bg-dark p-5">
+        <p class="text-white fw-bold fs-4 mb-4">Our top cities</p>
+        <div class="row">
+          <div class="col-6 col-md-4 col-lg-2 text-white text-start mb-3">
+            <p>San Francisco</p>
+            <p>Miami</p>
+            <p>San Diego</p>
+            <p>East Bay</p>
+            <p>Long Beach</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-white text-start mb-3">
+            <p>Los Angeles</p>
+            <p>Washington DC</p>
+            <p>Seattle</p>
+            <p>Portland</p>
+            <p>Nashville</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-white text-start mb-3">
+            <p>New York City</p>
+            <p>Orange County</p>
+            <p>Atlanta</p>
+            <p>Charlotte</p>
+            <p>Denver</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-white text-start mb-3">
+            <p>Chicago</p>
+            <p>Phoenix</p>
+            <p>Las Vegas</p>
+            <p>Sacramento</p>
+            <p>Oklahoma City</p>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2 text-white text-start mb-3">
+            <p>San Francisco</p>
+            <p>Miami</p>
+            <p>San Diego</p>
+            <p>East Bay</p>
+            <p>Long Beach</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
